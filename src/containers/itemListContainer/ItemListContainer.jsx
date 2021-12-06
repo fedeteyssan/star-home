@@ -7,6 +7,7 @@ import ItemList from "../../components/itemList/ItemList";
 import {getFirestore} from "../../firebase"
 import { collection, query, where, getDocs} from "@firebase/firestore";
 
+
 const ItemListContainer = (props) => {
     
     const{ categoryID } = useParams();
@@ -17,7 +18,6 @@ const ItemListContainer = (props) => {
 
         const q = query(collection(db, "items"));
 
-        //Si no está definida ninguna categoría en la ruta, que no filtre
         if (!categoryID) {getDocs(q).then((snapshot) => {
             setProducts(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})));
         });

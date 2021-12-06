@@ -4,11 +4,10 @@ import { Button, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
 
+
 const Cart = () =>{
 
     const { cart, removeItem, clearCart, calculatePurchaseValue } = useCart();
-
-    
 
     return (
         cart.length

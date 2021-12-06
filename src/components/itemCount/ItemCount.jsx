@@ -35,9 +35,6 @@ const ItemCount = ({item}) => {
     };
     
     
-    
-    //El ItemCount (hijo) recibe como parámetro onAdd del ItemDetail (padre) la función AddToCart, que ejecutará al hacer click en el botón de Añadir al carrito
-
     return (
 
         <div className="add-quantity">
@@ -52,7 +49,6 @@ const ItemCount = ({item}) => {
             :<Button variant="primary" onClick={()=> {addItem(item,1);setFlag(true)}}>Añadir al carrito</Button>
             }
         </div>
-       
     )
 }
 export default ItemCount;

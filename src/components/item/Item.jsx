@@ -2,8 +2,6 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-//El componente Item (hijo) recibe como parámetro "item" del ItemList(padre) cada uno de los objetos del array productos, y va a renderizar cada una de sus propiedades
-
 const Item = ({item}) =>{
 
     return(

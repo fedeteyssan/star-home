@@ -5,6 +5,7 @@ import ItemDetail from "../../components/itemDetail/ItemDetail";
 import {getFirestore} from "../../firebase"
 import { doc, getDoc} from "@firebase/firestore";
 
+
 const ItemDetailContainer = () => {
 	
 	const{ itemID } = useParams();

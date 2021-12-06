@@ -7,6 +7,7 @@ import ItemListContainer from './containers/itemListContainer/ItemListContainer'
 import Cart from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
 
+
 function App() {
   return (
     <CartProvider>

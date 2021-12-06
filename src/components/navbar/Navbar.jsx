@@ -1,5 +1,3 @@
-
-
 import "./Navbar.scss";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -8,7 +6,6 @@ import CartWidget from "../cartWidget/CartWidget";
 
 
 const Navbar = () => {
-
 
     return (
         <header>
@@ -41,7 +38,6 @@ const Navbar = () => {
                 </div>
             </nav>
         </header>
-        
     )
 }
 export default Navbar;
