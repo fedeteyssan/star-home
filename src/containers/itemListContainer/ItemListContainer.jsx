@@ -6,8 +6,6 @@ import { Container } from "react-bootstrap";
 import ItemList from "../../components/itemList/ItemList";
 import {getFirestore} from "../../firebase"
 import { collection, query, where, getDocs} from "@firebase/firestore";
-//import catalogue from "../../catalogue.json";
-
 
 const ItemListContainer = (props) => {
     
@@ -33,29 +31,6 @@ const ItemListContainer = (props) => {
             });
         }
     }, [categoryID]);
-
-
-    /*const getProducts = (dataBase) => 
-        new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (dataBase) {
-                    resolve(dataBase);
-                } else {
-                    reject("No se han encontrado productos");
-                };
-            }, 2000);
-    });
-
-    useEffect(() => {
-        getProducts(catalogue)
-        .then((result) => {
-            categoryID
-            ? setProducts(result.filter((product) => product.category === categoryID))
-            : setProducts(catalogue);
-        })
-        .catch((err) => console.log(err));
-    }, [categoryID]);*/
-
 
     return (
        <Container fluid className="itemListContainer">

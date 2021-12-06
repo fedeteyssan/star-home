@@ -37,10 +37,13 @@ const CartProvider = ({ children }) => {
 		setCart([]);
 	};
 
+	const calculatePurchaseValue = cart.reduce((previousValue, currentValue) => previousValue + currentValue.pickedQuantity*currentValue.price,0);
+
+
 
     return (
 		//Exporto el CartProvider al App.js, y al estar wrappeando a todos los children, le puedo pasar a cualquiera de los hijos todo lo que figure dentro de la propiedad value
-		<CartContext.Provider value={{ addItem, removeItem, clearCart, cart}}>
+		<CartContext.Provider value={{ addItem, removeItem, clearCart, cart, calculatePurchaseValue}}>
 			{children}
 		</CartContext.Provider>
     );

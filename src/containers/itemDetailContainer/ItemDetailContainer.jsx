@@ -4,9 +4,6 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/itemDetail/ItemDetail";
 import {getFirestore} from "../../firebase"
 import { doc, getDoc} from "@firebase/firestore";
-//import catalogue from "../../catalogue.json";
-
-
 
 const ItemDetailContainer = () => {
 	
@@ -23,27 +20,6 @@ const ItemDetailContainer = () => {
 		  }
 		});
 	  }, [itemID]);
-
-
-
-	/*const getProducts = (database) =>
-		new Promise((resolve, reject) => {
-			setTimeout(() => {
-				if (database) {
-					resolve(database);
-				} else {
-					reject("No existe el producto seleccionado");
-				}
-			}, 1000);
-		});
-
-	useEffect(() => {
-		getProducts(catalogue)
-		.then((result) => {setProducts(result.find((product) => product.id===itemID));})
-		.catch((err) => console.log(err));
-		
-	}, [itemID]);*/
-
 
 	return(
         <>

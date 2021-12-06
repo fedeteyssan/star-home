@@ -6,9 +6,9 @@ import ItemCount from "../itemCount/ItemCount";
 
 const Cart = () =>{
 
-    const { cart, removeItem, clearCart } = useCart();
+    const { cart, removeItem, clearCart, calculatePurchaseValue } = useCart();
 
-    const calculatePurchaseValue = cart.reduce((previousValue, currentValue) => previousValue + currentValue.pickedQuantity*currentValue.price,0);
+    
 
     return (
         cart.length
