@@ -1,0 +1,36 @@
+
+.form-container{
+    display: flex;
+    justify-content: center;
+
+    form{
+        margin-top: 3rem;
+        height: 40rem;
+        width: 55rem;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .form-group{
+            margin: 2rem 0 0 2rem;
+
+            .form-label{
+                font-size: 2rem;
+            }
+        
+            .form-control{
+                width: fit-content;
+                font-size: 2rem;
+            }
+        }
+
+        .submit-btn{
+          
+            margin: 2rem 0 0 2rem;
+            font-size: 2rem;
+            
+        }
+        
+    }
+}

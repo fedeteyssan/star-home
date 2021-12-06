@@ -1,0 +1,48 @@
+.cart-container{
+
+    h1{
+        text-align: center;
+        margin: 2rem 25% 4rem 25%;
+        padding: 1rem;
+        border: groove beige;
+        background-color: beige;
+        color: darkslategray;
+    }
+
+    .cart-summary{
+        text-align: center;
+        
+        .row{
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .total-price{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .cart-buttons{
+        display: flex;
+        justify-content: center;
+       
+        button{
+            font-size: 2rem;
+            margin:0 1rem;
+        }
+    }
+}
+
+.empty-cart{
+    font-size: 4rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        font-size: 1.5rem;
+    }
+}

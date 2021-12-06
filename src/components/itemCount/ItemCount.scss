@@ -1,0 +1,32 @@
+
+.add-quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .counter{
+        width: 6rem;
+        height: 3rem;
+       
+        padding: 0.25rem;
+        margin-bottom: 0.5rem;
+        border-radius: 10%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: dimgray;
+       
+    
+        button{
+            width: 15px;
+            height: 15px;
+            font-size: 1rem;
+        }
+    
+        p{
+            color: white;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+    }
+}

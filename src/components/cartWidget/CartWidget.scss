@@ -1,0 +1,16 @@
+
+.cart-widget{
+    display: flex;
+    margin-top: 0.75rem;
+
+   span{
+       color: white;
+       height: 2rem;
+       width: 2rem;
+       border-radius: 50%;
+       background-color: rgb(199, 137, 22);
+       text-align: center;  
+       padding: 0.25rem 0rem 0rem 0rem;
+       font-size: 1.25rem;
+   }
+}

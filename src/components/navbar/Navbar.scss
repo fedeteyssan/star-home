@@ -1,0 +1,85 @@
+
+header{
+    border-bottom: 1px solid #E2E8F0;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        background-color: #ffb11f;
+
+        ul{
+            display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+            align-items: center;
+
+            @media only screen and (max-width: 768px) {
+                position: fixed;
+                left: -100%;
+                top: 5rem;
+                flex-direction: column;
+                background-color: #fff;
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+                & active {
+                    left: 0;
+                }
+            }
+
+            li{
+                list-style: none;
+                margin-left: 5rem;
+
+                @media only screen and (max-width: 768px) {
+                    margin: 2.5rem 0;
+                }
+
+                a{
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    font-weight:bold;
+                    color: #f5f5dc !important;
+                }
+                
+                &:hover{
+                    background-color: #e0bf93;
+                
+                }
+            }
+        }
+
+        a{
+            text-decoration: none;
+        }
+        
+        .brand-logo{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .hamburger{
+            display: none;
+
+            @media only screen and (max-width: 768px) {
+                display: block;
+                cursor: pointer;
+            }   
+            
+            .bar{
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: #101010;
+            }
+        }
+    }
+}
