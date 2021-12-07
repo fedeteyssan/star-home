@@ -1,7 +1,8 @@
+import "./ItemCount.scss";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import "./ItemCount.scss";
 import { useCart } from "../../context/CartContext";
+import Swal from 'sweetalert2';
 
 
 const ItemCount = ({item}) => {
@@ -29,7 +30,7 @@ const ItemCount = ({item}) => {
             setCounter(counter+1);
             addItem(item,1)
         }else{
-            alert("LLegaste al límite de unidades");
+            Swal.fire("LLegaste al límite de unidades");
         };
         
     };

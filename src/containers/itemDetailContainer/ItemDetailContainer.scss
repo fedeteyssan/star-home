@@ -1,5 +1,12 @@
-.Loader{
-    position: absolute;
-    top:20%;
-    left: 10%;
+.item-detail-container{
+
+    display: flex;
+    justify-content: center;
+
+    .card-loader{
+        position: absolute;
+        top:30%;
+        left: 45%;
+    }
 }
+

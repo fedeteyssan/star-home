@@ -6,7 +6,7 @@ header{
         display: flex;
         justify-content: space-between;
         padding: 0 1.5rem;
-        background-color: #ffb11f;
+        background-color: black;
 
         ul{
             display: flex;
@@ -41,14 +41,22 @@ header{
 
                 a{
                     text-decoration: none;
-                    font-size: 1.6rem;
+                    font-size: 2rem;
                     font-weight:bold;
-                    color: #f5f5dc !important;
+                    color: white !important;
                 }
                 
                 &:hover{
-                    background-color: #e0bf93;
-                
+                    text-shadow:
+                        0 0 7px #fff,
+                        0 0 10px #fff,
+                        0 0 21px #fff,
+                        0 0 42px #0fa,
+                        0 0 82px #0fa,
+                        0 0 92px #0fa,
+                        0 0 102px #0fa,
+                        0 0 151px #0fa;
+                    
                 }
             }
         }
@@ -58,9 +66,9 @@ header{
         }
         
         .brand-logo{
-            width: 40px;
+            width: 70px;
             height: 40px;
-            border-radius: 50%;
+            
         }
 
         .hamburger{

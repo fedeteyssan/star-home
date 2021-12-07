@@ -16,11 +16,11 @@ function App() {
         <Switch>
           <Route exact path="/">
             <main className="App">
-              <ItemListContainer greetings="Bienvenidos a Somos Wica" />
+              <ItemListContainer greetings="Bienvenidos a Star Home" />
             </main>
           </Route>
           <Route exact path="/categoria/:categoryID">
-            <ItemListContainer greetings="Bienvenidos a Somos Wica" />
+            <ItemListContainer/>
           </Route>
           <Route exact path="/item/:itemID">
             <ItemDetailContainer />

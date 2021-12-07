@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/Logo-Wica.jpg"
+import logo from "../../assets/Logo.jpg"
 import CartWidget from "../cartWidget/CartWidget";
 
 

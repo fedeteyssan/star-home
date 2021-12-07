@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
     const itemInCart = cart.find((product)=> product.id===item.id);
 
     return (
-		<Card key={item.id} style={{ width: "50rem", marginTop:"10rem", padding:"2rem", border:"solid #ffb11f"}}>
+		<Card key={item.id} style={{ width: "55rem", height:"35rem", marginTop:"10rem", padding:"2rem", border:"solid #ffb11f"}}>
             <Row>
                 <Col>
                     <Card.Img variant="top" src={item.pictureURL} style={{width: "200px"}}/>
