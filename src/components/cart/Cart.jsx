@@ -23,10 +23,13 @@ const Cart = () =>{
                                 </Col>
                                 <Col>
                                     <h2>{itemInCart.name}</h2>
-                                    <p>{itemInCart.pickedQuantity} x $ {itemInCart.price}</p>
+                                    <p>$ {itemInCart.price}</p>
                                 </Col>
                                 <Col>
                                     <ItemCount item={itemInCart} />
+                                </Col>
+                                <Col>
+                                    <p>$ {itemInCart.pickedQuantity*itemInCart.price}</p>
                                 </Col>
                                 <Col>
                                     <Button onClick={()=>removeItem(itemInCart.id)}>Eliminar</Button>
