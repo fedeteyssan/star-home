@@ -22,7 +22,9 @@ const ItemDetail = ({item}) => {
                         <Card.Text style={{textAlign:"center"}}>
                             {item.description}
                             <br/><br/>
-                            $ {item.price}
+                            Precio: $ {item.price}
+                            <br/><br/>
+                            Stock: {item.stock} u
                         </Card.Text>
                             <ItemCount item={item} /> 
                             {itemInCart? 
