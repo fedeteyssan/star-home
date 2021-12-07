@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAo0Db3cA_LwBPDadyz7Vl9NtNCBPyx7sI",
-    authDomain: "somoswica-3fbb1.firebaseapp.com",
-    projectId: "somoswica-3fbb1",
-    storageBucket: "somoswica-3fbb1.appspot.com",
-    messagingSenderId: "1056377996142",
-    appId: "1:1056377996142:web:dcc5269f8786a0cc5b777f"
-};
+      apiKey: "AIzaSyAJxvROVcbvFdHyv1fty5Ia92YLerDRLTM",
+      authDomain: "star-home-fedeteyssan.firebaseapp.com",
+      projectId: "star-home-fedeteyssan",
+      storageBucket: "star-home-fedeteyssan.appspot.com",
+      messagingSenderId: "523388087620",
+      appId: "1:523388087620:web:2d659fafc697b45a1a3b11"
+};    
 
 const app = initializeApp(firebaseConfig);
 
