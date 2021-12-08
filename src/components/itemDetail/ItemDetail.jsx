@@ -27,8 +27,8 @@ const ItemDetail = ({item}) => {
                     <>
                         <div>
                             <div className="card-buttons">
-                                <Link to="/cart"><Button variant="danger">Ver carrito espacial</Button></Link>
                                 <Link to="/"><Button variant="danger">Seguir comerciando </Button></Link>
+                                <Link to="/cart"><Button variant="danger">Ver carrito espacial</Button></Link>
                             </div>
                         </div>
                     </>

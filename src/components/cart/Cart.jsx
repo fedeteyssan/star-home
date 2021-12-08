@@ -3,6 +3,8 @@ import { useCart } from "../../context/CartContext";
 import { Button, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
+import deleteItem from "../../assets/deleteItem.png"
+
 
 
 const Cart = () =>{
@@ -19,7 +21,7 @@ const Cart = () =>{
                         return(
                             <Row key={itemInCart.id}>
                                 <Col>
-                                    <Image src={itemInCart.pictureURL} style={{width: "10rem"}}/>
+                                    <Image src={itemInCart.pictureURL} style={{width: "10rem", border:"2px double black"}}/>
                                 </Col>
                                 <Col>
                                     <h4>{itemInCart.name}</h4>
@@ -32,7 +34,7 @@ const Cart = () =>{
                                     <p>$ {itemInCart.pickedQuantity*itemInCart.price}</p>
                                 </Col>
                                 <Col>
-                                    <Button onClick={()=>removeItem(itemInCart.id)}>Eliminar</Button>
+                                    <img src={deleteItem} alt="" className="delete-icon" onClick={()=>removeItem(itemInCart.id)} />
                                 </Col>
                             </Row>
                         );

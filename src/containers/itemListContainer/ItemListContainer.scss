@@ -1,6 +1,7 @@
 .item-list-container{
     background-image: url(../../assets/background.jpeg);
     background-size:cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
