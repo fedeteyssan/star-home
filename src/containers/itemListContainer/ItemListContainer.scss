@@ -1,6 +1,5 @@
 .item-list-container{
     background-image: url(../../assets/background.jpeg);
-    background-repeat: no-repeat;
     background-size:cover;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@
     }
     
     .loader{
-        margin-top: 10rem;
+        margin-top: 5rem;
         font-size: 3rem;
         display: flex;
         flex-direction: column;

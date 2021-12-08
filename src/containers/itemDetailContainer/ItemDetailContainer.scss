@@ -1,7 +1,9 @@
 .item-detail-container{
-
+    background-image: url(../../assets/background2.jpeg);
+    background-size:cover;
     display: flex;
     justify-content: center;
+    height: 95vh;
 
     .card-loader{
         position: absolute;

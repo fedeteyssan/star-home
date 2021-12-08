@@ -3,6 +3,8 @@ import "./CartWidget.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../../context/CartContext";
+import cartIcon from "../../assets/Cart.png";
+
 
 
 const CartWidget = () => {
@@ -14,7 +16,7 @@ const CartWidget = () => {
 
     return (
         <div className="cart-widget">
-            <FontAwesomeIcon icon={faShoppingBasket} />
+            <img src={cartIcon} alt="" />
             <span>{unitsInCart}</span>
         </div>
     )

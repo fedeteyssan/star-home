@@ -5,7 +5,14 @@
     font-size:4rem;
     color:white;
 
+    img{
+        width: 5rem;
+        height: 5rem;
+    }
+
    span{
+       position: relative;
+       right: 3rem;
        color: black;
        height: 2rem;
        width: 2rem;

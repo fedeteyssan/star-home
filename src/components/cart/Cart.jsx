@@ -19,11 +19,11 @@ const Cart = () =>{
                         return(
                             <Row key={itemInCart.id}>
                                 <Col>
-                                    <Image src={itemInCart.pictureURL} style={{width: "100px"}}/>
+                                    <Image src={itemInCart.pictureURL} style={{width: "10rem"}}/>
                                 </Col>
                                 <Col>
-                                    <h2>{itemInCart.name}</h2>
-                                    <p>$ {itemInCart.price}</p>
+                                    <h4>{itemInCart.name}</h4>
+                                    <p>Precio: $ {itemInCart.price}</p>
                                 </Col>
                                 <Col>
                                     <ItemCount item={itemInCart} />
@@ -52,18 +52,10 @@ const Cart = () =>{
             </div>
         ):
         <div className="empty-cart">
-			<Row>
-				<Col>
-					<p>Tu carrito está vacío </p>
-				</Col>
-			</Row>
-			<Row>
-				<Col>
-					<Link to="/">
-						<Button variant="secondary"><strong>Buscar tus productos</strong></Button>
-					</Link>
-				</Col>
-			</Row>
+            <p>¡Oh no... los jawas saquearon tu carrito! </p>
+			<Link to="/">
+				<button variant="secondary"><strong>Busca nuevos productos</strong></button>
+			</Link>
 		</div>
     )
 }

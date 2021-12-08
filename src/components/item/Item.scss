@@ -1,17 +1,16 @@
 .item-card{
     width: 25rem;
     height:35rem;
-    
+    background-color: white;
     font-size:1.5rem;
     margin:3rem 1rem 1rem 1rem;
     padding: 1rem;
-    background-color: white;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 225, 255);
     border-radius: 20px;
     box-shadow:
-    0 0 50px rgb(255, 0, 76),            
-    -10px 0 80px  rgb(255, 0, 76),        
-    10px 0 80px  rgb(255, 0, 76);  
+    0 0 50px rgb(0, 225, 255),            
+    -10px 0 80px  rgb(0, 225, 255),       
+    10px 0 80px  rgb(0, 225, 255);
     
     @media only screen and (min-width: 768px){
         margin-top: 10rem;
@@ -33,14 +32,14 @@
 
         h3,p{
             animation: flicker 1.5s infinite alternate;
-            color: red;
+            color: black;
         }
 
         @keyframes flicker {
             0%, 18%, 22%, 25%, 53%, 57%, 100% {
           
                 text-shadow:
-                0 0 1.75px rgb(255, 0, 119),
+                0 0 1.75px rgb(0, 225, 255);
             }
             20%, 24%, 55% {        
                 text-shadow: none;

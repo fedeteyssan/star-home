@@ -1,6 +1,5 @@
 import "./ItemCount.scss";
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import { useCart } from "../../context/CartContext";
 import Swal from 'sweetalert2';
 
@@ -47,7 +46,7 @@ const ItemCount = ({item}) => {
                <p>{counter}</p>
                <button onClick={onIncrease}>+</button>
             </div>
-            :<Button variant="danger" onClick={()=> {addItem(item,1);setFlag(true)}}>Añadir al carrito</Button>
+            :<button className="add-btn" onClick={()=> {addItem(item,1);setFlag(true)}}>Añadir al carrito</button>
             }
         </div>
     )

@@ -1,26 +1,42 @@
 .cart-container{
+    background-image: url(../../assets/background4.png);
+    background-attachment: fixed;
+    height: 95vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1{
         text-align: center;
-        margin: 2rem 25% 4rem 25%;
         padding: 1rem;
-        border: groove beige;
-        background-color: beige;
-        color: darkslategray;
     }
 
     .cart-summary{
         text-align: center;
+        background-color: #ffffff10;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid white;
+        padding: 2rem 0;
         
         .row{
             align-items: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
+            
+            .col{
+                margin: 0 2rem;
+            }
+
+            p{  
+                font-size: 1.5rem;
+            }
         }
-    }
+    }   
 
     .total-price{
         font-size: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
 
     .cart-buttons{
@@ -35,14 +51,62 @@
 }
 
 .empty-cart{
-    font-size: 4rem;
-    margin-top: 4rem;
+    background-image: url(../../assets/background3.jpeg);
+    background-size:cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    height: 95vh;
+
+    p{
+        color: white;
+       
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 4rem;
+    
+        @media only screen and (min-width: 768px) {
+            font-size: 4rem;
+            margin-top: 4rem;
+        }
+    }
 
     button{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        color: white;
+        background-color: darkslategray;
+        border-radius: 10px;
+        padding: 1rem;
+
+        &:hover{
+            letter-spacing: 2.5px;
+        }
+
+        &:after,
+        &:before {
+            backface-visibility: hidden;
+            border: 1px solid rgba(#fff, 0);
+            bottom: 0px;
+            content: " ";
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            transition: all 280ms ease-in-out;
+            width: 0;
+        }
+
+        &:hover:after,
+        &:hover:before {
+            backface-visibility: hidden;
+            border-color: #fff;
+            transition: width 350ms ease-in-out;
+            width: 100%;
+        }
+
+        &:hover:before {
+            bottom: auto;
+            top: 0;
+            width: 100%;
+        }
     }
 }
