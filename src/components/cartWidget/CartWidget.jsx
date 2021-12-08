@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartWidget.scss";
 import { useCart } from "../../context/CartContext";
-import cartIcon from "../../assets/Cart.png";
+import cartIcon from "../../assets/cart.png";
 
 
 
