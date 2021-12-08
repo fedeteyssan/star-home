@@ -14,7 +14,7 @@ const CartWidget = () => {
 
     return (
         <div className="cart-widget">
-            <FontAwesomeIcon icon={faShoppingBasket} style={{fontSize:"2.5rem", color:"white"}} />
+            <FontAwesomeIcon icon={faShoppingBasket} />
             <span>{unitsInCart}</span>
         </div>
     )

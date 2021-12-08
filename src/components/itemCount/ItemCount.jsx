@@ -47,7 +47,7 @@ const ItemCount = ({item}) => {
                <p>{counter}</p>
                <button onClick={onIncrease}>+</button>
             </div>
-            :<Button variant="primary" onClick={()=> {addItem(item,1);setFlag(true)}}>Añadir al carrito</Button>
+            :<Button variant="danger" onClick={()=> {addItem(item,1);setFlag(true)}}>Añadir al carrito</Button>
             }
         </div>
     )

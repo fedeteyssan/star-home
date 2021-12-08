@@ -1,5 +1,5 @@
 import ItemCount from "../itemCount/ItemCount";
-import { Card, Button, Row, Col} from "react-bootstrap";
+import { Button,} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./ItemDetail.scss";
 import { useCart } from "../../context/CartContext";
@@ -11,37 +11,33 @@ const ItemDetail = ({item}) => {
     const itemInCart = cart.find((product)=> product.id===item.id);
 
     return (
-		<Card key={item.id} style={{ width: "55rem", height:"35rem", marginTop:"10rem", padding:"2rem", border:"solid #ffb11f"}}>
-            <Row>
-                <Col>
-                    <Card.Img variant="top" src={item.pictureURL} style={{width: "200px"}}/>
-                </Col>
-                <Col>
-                    <Card.Body style={{height:"30rem", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-around"}}>
-                        <Card.Title>{item.name}</Card.Title>
-                        <Card.Text style={{textAlign:"center"}}>
+		<div className="item-detail-card"key={item.id}>
+            
+                    <img classname="detail-img" alt="" variant="top" src={item.pictureURL}/>
+              
+                    <div className="detail-body">
+                        <h2>{item.name}</h2>
+                        <p>
                             {item.description}
                             <br/><br/>
                             Precio: $ {item.price}
                             <br/><br/>
                             Stock: {item.stock} u
-                        </Card.Text>
+                        </p>
                             <ItemCount item={item} /> 
                             {itemInCart? 
                             <>
                                 <div>
                                     <div className="card-buttons">
-                                        <Link to="/cart"><Button variant="primary">Ver carrito </Button></Link>
-                                        <Link to="/"><Button variant="primary">Seguir comprando </Button></Link>
+                                        <Link to="/cart"><Button variant="danger">Ver carrito espacial</Button></Link>
+                                        <Link to="/"><Button variant="danger">Seguir comerciando </Button></Link>
                                     </div>
                                 </div>
                             </>
                             :<></>
                             } 
-                    </Card.Body>
-                </Col>
-            </Row>
-        </Card>
+                    </div>
+        </div>
     )
 };
 

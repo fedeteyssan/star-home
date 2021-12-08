@@ -1,0 +1,52 @@
+.item-card{
+    width: 25rem;
+    height:35rem;
+    
+    font-size:1.5rem;
+    margin:3rem 1rem 1rem 1rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 20px;
+    box-shadow:
+    0 0 50px rgb(255, 0, 76),            
+    -10px 0 80px  rgb(255, 0, 76),        
+    10px 0 80px  rgb(255, 0, 76);  
+    
+    @media only screen and (min-width: 768px){
+        margin-top: 10rem;
+    }
+
+    .item-img{
+        max-height: 200px;
+    }
+
+    .item-box{
+        height:12rem;
+        margin-top: 1rem;
+        padding: 1rem 1rem 0 1rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-around;
+     
+
+        h3,p{
+            animation: flicker 1.5s infinite alternate;
+            color: red;
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+          
+                text-shadow:
+                0 0 1.75px rgb(255, 0, 119),
+            }
+            20%, 24%, 55% {        
+                text-shadow: none;
+            }    
+          }
+
+       
+    }
+}

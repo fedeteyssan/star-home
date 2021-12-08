@@ -15,9 +15,6 @@ const Navbar = () => {
                 </Link>
                 <ul className="nav-menu">
                     <li>
-                        <Link to="/nosotros">Nosotros</Link>
-                    </li>
-                    <li>
                         <Link to="/categoria/cocina">Cocina</Link>
                     </li>
                     <li>
@@ -25,9 +22,6 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="/categoria/escritorio">Escritorio</Link>
-                    </li>
-                    <li>
-                        <Link to="/contacto">Contacto</Link>
                     </li>
                 </ul>
                 <Link to="/cart"><CartWidget /></Link>

@@ -1,19 +1,19 @@
 
-import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Item.scss";
 
 const Item = ({item}) =>{
 
     return(
-        <Card key={item.id} style={{ width: "18rem", height:"30rem", fontSize:"1rem", margin:"1rem"}}>
+        <div className="item-card" key={item.id}>
             <Link to={`/item/${item.id}`}>
-                <Card.Img variant="top" src={item.pictureURL} style={{maxHeight: "200px"}}/>
+                <img className="item-img" alt="" src={item.pictureURL} />
             </Link>
-            <Card.Body style={{height:"15rem", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-around"}}>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>$ {item.price}</Card.Text>
-            </Card.Body>
-        </Card>
+            <div className="item-box">
+                <h3>{item.name}</h3>
+                <p>$ {item.price}</p>
+            </div>
+        </div>
     );
 };
 

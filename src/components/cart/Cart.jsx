@@ -54,13 +54,13 @@ const Cart = () =>{
         <div className="empty-cart">
 			<Row>
 				<Col>
-					<p>Buu, tu carrito está vacío 😔</p>
+					<p>Tu carrito está vacío </p>
 				</Col>
 			</Row>
 			<Row>
 				<Col>
 					<Link to="/">
-						<Button variant="secondary"><strong>Buscar tus Wica!</strong></Button>
+						<Button variant="secondary"><strong>Buscar tus productos</strong></Button>
 					</Link>
 				</Col>
 			</Row>

@@ -39,7 +39,7 @@ const ItemListContainer = () => {
           ? products.map((product) => <Item item={product} key={product.id}/>)
           : <div className="loader">
               <img src={loader} alt="" className="loader-img"/>
-              <p>Rastreando productos</p>
+              <p>...Rastreando productos...</p>
             </div>  
         }
         </Container>
