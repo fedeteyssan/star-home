@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/itemDetail/ItemDetail";
 import {getFirestore} from "../../firebase"
 import { doc, getDoc} from "@firebase/firestore";
+import loader2 from "../../assets/loader2.gif"
 
 
 const ItemDetailContainer = () => {
@@ -24,7 +25,12 @@ const ItemDetailContainer = () => {
 
 	return(
         <div className="item-detail-container">
-			{products ? <ItemDetail item={products}/> : <p className="card-loader">Rastreando producto</p>}
+			{products 
+			? <ItemDetail item={products}/> 
+			: <div className="card-loader">
+				<img src={loader2} alt=""/>
+				<p>...Buscando producto...</p>
+			  </div>}
 		</div>
     ) 
 };

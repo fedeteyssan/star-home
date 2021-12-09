@@ -1,4 +1,4 @@
-
+import "./Checkout.scss";
 import { useState } from "react";
 import {useHistory} from "react-router-dom";
 import { useCart } from "../../context/CartContext";
@@ -6,7 +6,6 @@ import { Row, Col,Form, Button, Container } from "react-bootstrap";
 import {getFirestore} from "../../firebase"
 import { addDoc, collection, updateDoc, doc } from "@firebase/firestore";
 import Swal from 'sweetalert2';
-import "./Checkout.scss";
 
 
 const Checkout = () => {
@@ -74,7 +73,7 @@ const Checkout = () => {
                                 updateDoc(doc( db, "items", item.id), {stock: item.stock - item.pickedQuantity});
                             })
 
-                            setFlag(true);
+                            setTimeout( () => setFlag(true), 2000);
                         }
                     }
                 }
@@ -89,40 +88,44 @@ const Checkout = () => {
     }
 
     return(
-        <Container className="form-container">
+        <Container fluid className="form-container">
 
             {flag
             ?<div className="modal-purchase">
                 <p>
-                    {`Muchas gracias ${newOrder.buyer.name} por tu compra, tu orden es la ${orderID} por un valor de $${newOrder.total} para la dirección ${newOrder.buyer.adress}. Te enviamos la factura a ${newOrder.buyer.email}`}
+                    {`Muchas gracias ${newOrder.buyer.name} por tu compra, tu orden es la ${orderID} con un valor de $${newOrder.total}. Ya está viajando por el hiperespacio hacia tu planeta en la dirección ${newOrder.buyer.adress}. Te enviamos la factura a ${newOrder.buyer.email}`}
                 </p>
                 <button onClick={onHandleConfirm}> Adios y que la fuerza te acompañe</button>
             </div>
             :
-            <Form>
-                <Form.Group className="form-group" controlId="formularioNombre">
-                    <Form.Label>Nombre</Form.Label>
-                    <Form.Control type="text" placeholder="Nombre Apellido" name="name" onChange={fillBuyerInfo} required />
-                </Form.Group>
-                <Row>
-                    <Form.Group as={Col} className="form-group" controlId="formularioMail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="ejemplo@gmail.com" name="email" onChange={fillBuyerInfo} required/>
-                    </Form.Group>
-                    <Form.Group as={Col} className="form-group" controlId="formularioMail">
-                        <Form.Label>Confirmar email</Form.Label>
-                        <Form.Control type="email" placeholder="ejemplo@gmail.com" name="emailCheck" onChange={fillBuyerInfo} required/>
-                    </Form.Group>
-                </Row>
-            
-                <Form.Group className="form-group" controlId="formGridAddress1">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control type="text" placeholder="Dirección" name="adress" onChange={fillBuyerInfo} required/>
-                </Form.Group>
-            
-                <Button variant="primary" type="submit" className="submit-btn" onClick={onHandleSubmit} >Finalizar compra</Button>
-            </Form>
-            }
+            <Row>
+                <Col>
+                    <Form>
+                        <Form.Group className="form-group" controlId="formularioNombre">
+                            <Form.Label>Nombre y apellido</Form.Label>
+                            <Form.Control type="text" placeholder="Nombre Apellido" name="name" onChange={fillBuyerInfo} required />
+                        </Form.Group>
+                        <Row>
+                            <Form.Group as={Col} className="form-group" controlId="formularioMail">
+                                <Form.Label>e-mail</Form.Label>
+                                <Form.Control type="email" placeholder="ejemplo@gmail.com" name="email" onChange={fillBuyerInfo} required/>
+                            </Form.Group>
+                            <Form.Group as={Col} className="form-group" controlId="formularioMail">
+                                <Form.Label>Confirmar e-mail</Form.Label>
+                                <Form.Control type="email" placeholder="ejemplo@gmail.com" name="emailCheck" onChange={fillBuyerInfo} required/>
+                            </Form.Group>
+                        </Row>
+                    
+                        <Form.Group className="form-group" controlId="formGridAddress1">
+                            <Form.Label>Dirección</Form.Label>
+                            <Form.Control type="text" placeholder="Calle xxxx" name="adress" onChange={fillBuyerInfo} required/>
+                        </Form.Group>
+                
+                        <Button variant="primary" type="submit" className="submit-btn" onClick={onHandleSubmit} >Finalizar compra</Button>
+                    </Form>
+                </Col>
+            </Row>
+        }
         </Container>
         
     );

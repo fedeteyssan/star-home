@@ -1,6 +1,7 @@
 
 header{
     border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 5rem;
 
     nav{
         display: flex;
@@ -8,6 +9,9 @@ header{
         padding: 0 1.5rem;
         background-color: rgb(15, 2, 2);
         height: 6rem;
+        position: fixed;
+        top:0;
+        width: 100%;
 
         ul{
             display: flex;

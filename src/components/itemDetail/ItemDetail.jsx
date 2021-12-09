@@ -1,7 +1,7 @@
+import "./ItemDetail.scss";
 import ItemCount from "../itemCount/ItemCount";
 import { Button,} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./ItemDetail.scss";
 import { useCart } from "../../context/CartContext";
 
 

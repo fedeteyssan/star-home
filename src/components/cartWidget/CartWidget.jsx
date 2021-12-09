@@ -1,5 +1,5 @@
-import React from "react";
 import "./CartWidget.scss";
+import React from "react";
 import { useCart } from "../../context/CartContext";
 import cartIcon from "../../assets/cart.png";
 
